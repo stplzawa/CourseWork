@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Platformer Course Work</title>
+        <link rel="stylesheet" href="/resources/fonts/BebasNeue/stylesheet.css">
+        <link rel="stylesheet" href="/resources/styles/errorsstyle.css">
+    </head>
+    <body>
+    <div class="parent">
+        <div class="inner">
+            <div class="block">
+                <div class="errorheader">Error occurred. 404.</div>
+                <div class="redirecttext" style="margin-right: 30px;">Redirect in:</div>
+                <div class="redirecttext" id="redirtimer">5</div>
+            </div>
+        </div>
+    </div>
+    </body>
+    <script>
+        let timerElement = document.getElementById("redirtimer");
+        setInterval( () => {
+            let time = parseInt(timerElement.innerText);
+            time ? timerElement.innerText = (time - 1).toString() : window.location.replace("/");
+        }, 1000);
+    </script>
+</html>

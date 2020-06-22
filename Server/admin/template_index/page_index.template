@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Admin panel</title>
+        <link rel="stylesheet" type="text/css" href="#PAGECSS#">
+        #LOGINSCRIPT#
+    </head>
+    <body>
+        <div class="maincaption">Enter your login and password</div>
+        <div id="#STATESTRING#"></div>
+        <form name="#AUTHFORM#" accept-charset="UTF-8">
+            <label class="desc" for="fieldlogin">Login: </label>
+            <input type="text" id="fieldlogin" name="Login" max="64">
+            <label class="desc" for="fieldpass">Password:</label>
+            <input type="password" id="fieldpass" name="Password" max="64">
+            <input type="hidden" name="Action" value="TryAuth">
+        </form>
+        <input type="button" value="Login" onclick="#LOGINFUNCTION#()">
+    </body>
+</html>

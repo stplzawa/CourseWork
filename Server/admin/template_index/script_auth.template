@@ -1,0 +1,38 @@
+<script type="module">
+    import AJAX from "#AJAXMODULE#";
+    window.#LOGINFUNCTION# = function() {
+        document.getElementById("#STATESTRING#").innerText = "";
+        let AJAXM = new AJAX();
+        AJAXM.POST("#AUTHHANDLER#", {
+            onload:
+                function (){
+                    let RequestResult = JSON.parse(this.responseText);
+                    let StateCaption = "";
+                    switch (RequestResult.Code){
+                        case false:
+                            StateCaption = "Wrong login and password pair";
+                            break;
+                        case true:
+                        case 1:
+                            window.location.href = "#SUCCESSREDIRECT#";
+                            break;
+                        case 2:
+                        case 3:
+                        default:
+                            StateCaption = "Error occurred while request";
+                            break;
+                    }
+                    if (StateCaption) {
+                        document.getElementById("#STATESTRING#").innerText = StateCaption;
+                        setTimeout(() =>{
+                            document.getElementById("#STATESTRING#").innerText = "";
+                        }, 2500);
+                    }
+                },
+            onerror:
+                function () {
+                    document.getElementById("#STATESTRING#").innerText = "Error occurred while request";
+                }
+        }, null, "#AUTHFORM#");
+    };
+</script>

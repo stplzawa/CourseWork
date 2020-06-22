@@ -1,0 +1,4 @@
+{
+  "redirectlogin"   : "/admin/panel/",
+  "redirectlogout"  : "/admin/"
+}

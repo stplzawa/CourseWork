@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+    <link rel="stylesheet" type="text/css" href="/resources/styles/adminpanelstyle.css">
+    <script defer type="module" src="/resources/scripts/adminactions.js"> </script>
+    <script defer>
+        window.onload = function (){
+            refreshTable();
+        }
+    </script>
+</head>
+<body>
+    <table class="infotable">
+        <tbody>
+            <tr>
+                <td class="mainheader" colspan="3">
+                    <div class="mainheader">Table of registered product key</div>
+                </td>
+                <td class="mainheader" style="align-content: center;">
+                    <input type="button" style="display: inline-block;" value="Refresh" onclick="refreshTable()"/>
+                    <br>
+                    <input type="text" id="Refresh_FromValue" class="rangeval" value="1" placeholder="From">
+                    <input type="text" id="Refresh_ToValue" class="rangeval" value="Max"  placeholder="To">
+                </td>
+            </tr>
+            <tr>
+                <td class="mainheader" style="display: none" colspan="4" id="ErrorTD">
+                    <div class="errorheader">Error: </div>
+                    <div class="errorheader" id="ErrorStatus">404</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="NewKey_ProductKey" size="32" type="text" class="newkey" placeholder="Type key here | Empty for random" style="width: 100%;"/>
+                </td>
+                <td colspan="2">
+                    <input id="NewKey_ControlInfo" size="32" type="text" class="newkey" placeholder="Control info | Empty for free register" style="width: 100%;"/>
+                </td>
+                <td>
+                    <input type="button" value="Add new key" onclick="insertRecord()"/>
+                </td>
+            </tr>
+            <tr>
+                <th>Product key</th>
+                <th>Control client info</th>
+                <th>Is free?</th>
+                <th>Actions</th>
+            </tr>
+        </tbody>
+        <tbody id="tablecontent">
+
+        </tbody>
+    </table>
+</body>
+</html>

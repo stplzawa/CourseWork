@@ -1,0 +1,23 @@
+*{
+    margin: 5px 2px 5px 2px;
+}
+.maincaption{
+    font-size: 20px;
+}
+
+.desc{
+    font-size: 15px;
+}
+
+#StateString{
+    color: #c90000;
+    font-size: 25px;
+}
+
+input{
+    display: block;
+}
+
+input[type=button]{
+    display: block;
+}

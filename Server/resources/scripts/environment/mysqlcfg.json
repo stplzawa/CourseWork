@@ -1,0 +1,23 @@
+{
+  "Products" : {
+    "Hostname"      : "127.0.0.1",
+    "Username"      : "platformer",
+    "Password"      : "platformerpass",
+    "Databasename"  : "Platformer_Product",
+    "Tablename"     : "ProductAccess"
+  },
+  "AdminAuthAccounts" : {
+    "Hostname"        : "127.0.0.1",
+    "Username"        : "platformer",
+    "Password"        : "platformerpass",
+    "Databasename"    : "Platformer_System",
+    "Tablename"       :  "AdminAuthAccounts"
+  },
+  "AdminAuthSessions" : {
+    "Hostname"        : "127.0.0.1",
+    "Username"        : "platformer",
+    "Password"        : "platformerpass",
+    "Databasename"    : "Platformer_System",
+    "Tablename"       : "AdminAuthSessions"
+  }
+}

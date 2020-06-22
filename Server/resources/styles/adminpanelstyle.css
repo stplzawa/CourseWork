@@ -1,0 +1,80 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+input.rangeval{
+    display: inline;
+    width: auto;
+    max-width: 60px;
+    margin: 2px 5px 2px 5px;
+    text-align: center;
+}
+
+input[type="button"]{
+    display: inline-block;
+    padding: 1px 3px 1px 3px;
+    font-family: 'Courier New';
+}
+
+tr,th,td{
+    padding: 2px 5px 2px 5px;
+    text-align: center;
+}
+
+th{
+    border: #333333 2px solid;
+    font-family: Verdana;
+    font-weight: normal;
+}
+
+td{
+    font-family: 'Courier New';
+    border-top: #333333 3px solid;
+}
+
+td+td{
+    border-left: #333333 2px solid;
+}
+
+table.infotable{
+    border: #333333 2px solid;
+    width: auto;
+    border-collapse: collapse;
+}
+
+.cellfree{
+    background-color: green;
+}
+
+.cellnotfree{
+    background-color: red;
+}
+
+input[type="text"].newkey{
+    text-align: center;
+}
+
+.errorheader{
+    font-family: Verdana;
+    display: inline;
+    width: auto;
+    font-size: 15px;
+    color: #c90000;
+    padding: 10px 0px 10px 0px;
+}
+
+div.mainheader{
+    font-family: Verdana;
+    width: auto;
+    font-size: 20px;
+    padding: 10px 0px 10px 0px;
+}
+
+td.mainheader{
+    border: #292929 3px solid;
+}
+
+td.controlrow{
+    border: #292929 2px solid;
+}
