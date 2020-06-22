@@ -11,16 +11,13 @@ SOURCES += \
     hero.cpp \
     platform.cpp
 
+INCLUDEPATH += D:\Programs\Qt\SMFL\include
 
+INCLUDEPATH += D:\Programs\Qt\SMFL\include
+DEPENDPATH += D:\Programs\Qt\SMFL\include
 
+LIBS += -L"D:\Programs\Qt\SMFL\FOR_QT\LIBS"
 
-
-INCLUDEPATH += SMFL\include
-
-INCLUDEPATH += SMFL\include
-DEPENDPATH += SMFL\include
-
-LIBS += -L"SMFL\FOR_QT\LIBS"
 
 CONFIG(release, debug|release): LIBS += -lsfml-audio -lsfml-graphics -lsfml-main -lsfml-network -lsfml-window -lsfml-system
 CONFIG(debug, debug|release): LIBS += -lsfml-audio-d -lsfml-graphics-d -lsfml-main-d -lsfml-network-d -lsfml-window-d -lsfml-system-d
