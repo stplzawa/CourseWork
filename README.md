@@ -12,5 +12,5 @@
 </br>
 **Для подключения к серверу используется логин и пароль:**
 </br>
- *Halilov 
- *test@mail.ru
+ *Halilov* 
+ *test@mail.ru*
