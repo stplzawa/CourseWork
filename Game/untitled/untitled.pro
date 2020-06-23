@@ -11,16 +11,12 @@ SOURCES += \
     hero.cpp \
     platform.cpp
 
-INCLUDEPATH += D:\Programs\Qt\SMFL\include
 
-INCLUDEPATH += D:\Programs\Qt\SMFL\include
-DEPENDPATH += D:\Programs\Qt\SMFL\include
+INCLUDEPATH += $$PWD/SFML/include
+DEPENDPATH += $$PWD/SFML/include
 
-LIBS += -L"D:\Programs\Qt\SMFL\FOR_QT\LIBS"
-
-
-CONFIG(release, debug|release): LIBS += -lsfml-audio -lsfml-graphics -lsfml-main -lsfml-network -lsfml-window -lsfml-system
-CONFIG(debug, debug|release): LIBS += -lsfml-audio-d -lsfml-graphics-d -lsfml-main-d -lsfml-network-d -lsfml-window-d -lsfml-system-d
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/SFML/FOR_QT/LIBS/ -lsfml-audio -lsfml-graphics -lsfml-main -lsfml-network -lsfml-window -lsfml-system
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/SFML/FOR_QT/LIBS/  -lsfml-audio-d -lsfml-graphics-d -lsfml-main-d -lsfml-network-d -lsfml-window-d -lsfml-system-d
 
 TRANSLATIONS += \
     untitled_en_150.ts
